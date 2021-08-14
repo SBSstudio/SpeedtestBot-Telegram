@@ -40,6 +40,6 @@ async def download_upload(bot, message):
      uploadspeed = speed.upload()
      uploadspeed = uploadspeed/1000000 # bit to kbps
      await alert.delete()
-     await message.edit_text(f' ꜱ̶ᴘ̶ᴇ̶ᴇ̶ᴅ̶ ̶ᴛ̶ᴇ̶ꜱ̶ᴛ̶ ̶ʀ̶ᴇ̶ꜱ̶ᴜ̶ʟ̶ᴛ̶ /n/n**●Download Speed :** `{downloadspeed} kbps` \n**●Upload Speed :** `{uploadspeed} kbps` \n**●Server :** {speed.results.server["sponsor"]} ({speed.results.server["name"]})\n\n ©️ @TGspeedtestBot|@SBS_Studio')
+     await message.edit_text(f' ꜱ̶ᴘ̶ᴇ̶ᴇ̶ᴅ̶ ̶ᴛ̶ᴇ̶ꜱ̶ᴛ̶ ̶ʀ̶ᴇ̶ꜱ̶ᴜ̶ʟ̶ᴛ̶  /n/n**●Download Speed :** `{downloadspeed} kbps` \n**●Upload Speed :** `{uploadspeed} kbps` \n**●Server :** {speed.results.server["sponsor"]} ({speed.results.server["name"]})\n\n ©️ @TGspeedtestBot|@SBS_Studio')
 
 bughunter0.run()
