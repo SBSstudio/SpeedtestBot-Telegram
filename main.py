@@ -27,7 +27,7 @@ bughunter0 = Client(
 async def start(bot, update):
  txt = await update.reply_text("")
 
-@bughunter0.on_message(filters.private)
+@bughunter0.on_message(filters.command(["go"]))
 async def download_upload(bot, message):
      alert = await message.reply_text("Processing . . .")
      speed = speedtest.Speedtest() 
