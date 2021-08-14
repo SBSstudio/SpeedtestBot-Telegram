@@ -25,21 +25,21 @@ bughunter0 = Client(
 
 @bughunter0.on_message(filters.command(["start"]))
 async def start(bot, update):
- txt = await update.reply_text("ചത്തോന്ന് അറിയാൻ വന്നതാവും ല്ലേ !!")
+ txt = await update.reply_text("")
 
 @bughunter0.on_message(filters.private)
 async def download_upload(bot, message):
-     alert = await message.reply_text("Processing....")
+     alert = await message.reply_text("Processing . . .")
      speed = speedtest.Speedtest() 
-     await alert.edit("Getting Best server")
+     await alert.edit("Connecting to server . . .")
      speed.get_best_server()
      await alert.edit(f'**Connected to :** {speed.results.server["sponsor"]} ({speed.results.server["name"]})')
-     message = await message.reply_text("Checking Download / Upload Speed ...")
+     message = await message.reply_text("Checking Speed . . .")
      downloadspeed = speed.download()
      downloadspeed = downloadspeed/1000000 # bit to kbps
      uploadspeed = speed.upload()
      uploadspeed = uploadspeed/1000000 # bit to kbps
      await alert.delete()
-     await message.edit_text(f' **Download Speed :** `{downloadspeed} kbps` \n**Upload Speed :** `{uploadspeed} kbps` \n**Server :** {speed.results.server["sponsor"]} ({speed.results.server["name"]})\n \n © @BugHunterBots')
+     await message.edit_text(f' ꜱ̶ᴘ̶ᴇ̶ᴇ̶ᴅ̶ ̶ᴛ̶ᴇ̶ꜱ̶ᴛ̶ ̶ʀ̶ᴇ̶ꜱ̶ᴜ̶ʟ̶ᴛ̶ /n/n**●Download Speed :** `{downloadspeed} kbps` \n**●Upload Speed :** `{uploadspeed} kbps` \n**●Server :** {speed.results.server["sponsor"]} ({speed.results.server["name"]})\n\n ©️ @TGspeedtestBot|@SBS_Studio')
 
 bughunter0.run()
