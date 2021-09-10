@@ -4,7 +4,7 @@ RUN apt update && apt upgrade -y
 RUN apt install git curl python3-pip ffmpeg -y
 RUN pip3 install -U pip
 RUN cd /
-RUN git clone https://github.com/sanith2005/SpeedtestBot-Telegram
+RUN git clone https://github.com/SBSstudio/SpeedtestBot-Telegram
 RUN cd SpeedtestBot-Telegram
 WORKDIR /SpeedtestBot-Telegram
 RUN pip3 install -U -r requirements.txt
